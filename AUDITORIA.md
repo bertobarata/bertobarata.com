@@ -157,3 +157,45 @@ Pre-Flight:
 - **Badge "Disponível para trabalhar":** manter? Se sim, para quê (emprego ou projetos)?
 - **Versão EN do site:** sim ou não?
 - **MetLife:** aparece pelo nome ou como "mediação financeira e de seguros"?
+
+## 7. Estado após as correções (2 out 2026)
+
+Lighthouse mobile depois das correções: **Performance 99 · Acessibilidade 100 · Boas práticas 100 · SEO 100** (PT e EN). LCP 1,8 s (era 2,9 s), CLS 0. Página em mobile com 9.026 px (era 10.156 px).
+
+Resolvido:
+- **P1.1** CV retirado (ficheiro e botões).
+- **P1.2** Projetos alinhados com o Studio:
+  - para clientes: Valejas, Greenbond, Ludy, Cão na Rua, Gentle Laughter, Queen Bee, Barbearia;
+  - nova secção "Em desenvolvimento": Barata Studio, Meet Tracker, App TVDE, FINE RAG.
+- **P1.3** Intro com a frase do Studio; a MetLife aparece como "Mediação de seguros e financeira".
+- **P1.4** Botão "Próximo" só em desktop.
+- **P1.5** Alvos de toque com pelo menos 44 px.
+- **P1.6** Sem 100vh nem scroll-snap; o hero usa `100dvh`.
+- **P1.7** Imagens em WebP de 1200x750 (de 2,2 MB para cerca de 400 KB).
+- **P1.8** Ludy com captura.
+- **P1.9** SEO completo:
+  - imagem OG e JSON-LD (Person com `worksFor` Barata Studio e `sameAs`);
+  - robots.txt e sitemap com hreflang;
+  - HTTPS ativo e obrigatório.
+- **P2.1** Eyebrows só no hero e no Contacto.
+- **P2.2** Secções alinhadas à esquerda a partir do Sobre.
+- **P2.3** Accent único (lima).
+- **P2.4** Tecnologias monocromáticas numa tabela com hairlines.
+- **P2.5** Facetas em linhas, não em cards.
+- **P2.6** Logo oficial do Studio na nav e nas apps; links para o Studio no rodapé e no contacto.
+- **P2.7** Microtexto com pelo menos 12 px.
+- **P2.8** Geist self-hosted, com preload da Array e da Geist.
+- **P2.9** `<title>` sem travessão.
+- **P2.10** Copy de projetos separada (clientes / próprios).
+- **P3.1–P3.4, P3.6, P3.7:**
+  - bob removido;
+  - skip-link para `#about`;
+  - rodapé com o Studio;
+  - foto limpa;
+  - `pt-PT` mais versão EN;
+  - `color-scheme: dark`.
+- **Extra:** links "Código" para repos privados (Greenbond, Ludy) removidos; davam 404.
+
+Por fazer:
+- **P3.5** O badge fica "Disponível para projetos", por decisão do Berto.
+- **Search Console:** submeter `https://bertobarata.com/sitemap.xml`.
