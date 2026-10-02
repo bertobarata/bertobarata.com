@@ -7,11 +7,10 @@ export const profile = {
   location: 'Lisboa, Portugal',
   tagline: 'Construo websites feitos à mão, do briefing ao launch.',
   intro:
-    'Estudante de Engenharia Informática e de Computadores, fundador do Barata Studio e consultor financeiro. ' +
-    'Desenvolvo websites e aplicações com rigor técnico, código limpo e atenção ao detalhe.',
+    'Tenho base em Engenharia Informática e de Computadores e trabalho também em mediação de seguros e financeira, ' +
+    'em contacto diário com quem gere um negócio. Fundei o Barata Studio, onde desenho e programo websites e apps à medida.',
   email: 'berto.barata77@gmail.com',
-  available: 'Disponível para trabalhar',
-  cvUrl: '/berto-barata-cv.pdf',
+  available: 'Disponível para projetos',
   languages: [
     { name: 'Português', level: 'Nativo (C2)' },
     { name: 'Inglês', level: 'Profissional (C1)' },
@@ -33,119 +32,148 @@ export const roles = [
   'Pai, o meu melhor projeto',
 ];
 
+// Client work, ordered like baratastudio.com (strongest first).
 export type Project = {
   name: string;
   category: string;
   description: string;
   stack: string[];
   href?: string;      // live site
-  repo?: string;      // source
-  image?: string;     // real screenshot
-  year: string;
+  repo?: string;      // public source only
+  image: string;      // 1200x750 webp
   status: 'live' | 'wip';
-  accent?: string;    // per-card accent
 };
 
 export const projects: Project[] = [
   {
+    name: 'Valejas Atlético Clube',
+    category: 'Clube desportivo · plataforma',
+    description:
+      'Plataforma do clube de Valejas, Oeiras: loja online com MB WAY e Multibanco, inscrições e pedidos de sócio, área privada da Direção e comunicados publicados automaticamente nas redes sociais.',
+    stack: ['Next.js', 'Sanity CMS', 'GSAP', 'Vercel'],
+    href: 'https://valejasac.pt',
+    repo: 'https://github.com/bertobarata/valejas-ac',
+    image: '/images/projects/valejas.webp',
+    status: 'live',
+  },
+  {
+    name: 'Greenbond',
+    category: 'Finanças · sector público',
+    description:
+      'Plataforma de gestão e tokenização de ativos para organizações do sector público. Multi-idioma (PT/EN/FR/ES), com acessibilidade Google 100/100.',
+    stack: ['HTML', 'CSS', 'JavaScript', 'Multi-idioma'],
+    href: 'https://greenbond.pt',
+    image: '/images/projects/greenbond.webp',
+    status: 'live',
+  },
+  {
+    name: 'Ludy Artes',
+    category: 'E-commerce · personalização',
+    description:
+      'Loja de agendas feitas à medida, do pedido à entrega, com identidade própria. Mais de 800 agendas entregues.',
+    stack: ['HTML', 'CSS', 'JavaScript', 'Formspree'],
+    href: 'https://ludyartes.pt',
+    image: '/images/projects/ludyartes.webp',
+    status: 'live',
+  },
+  {
     name: 'Cão na Rua',
-    category: 'Creche & hotel canino',
+    category: 'Serviços · animais',
     description:
       'Presença digital para creche e hotel canino em Sintra. Reservas, serviços e galeria, com um tom próximo e caloroso.',
     stack: ['HTML', 'CSS', 'JavaScript', 'PurgeCSS'],
     href: 'https://caonarua.pt',
     repo: 'https://github.com/bertobarata/caonarua-public',
-    image: '/images/projects/caonarua.jpg',
-    year: '2025',
+    image: '/images/projects/caonarua.webp',
     status: 'live',
-    accent: '#e8934a',
   },
   {
     name: 'Gentle Laughter',
-    category: 'Produção & eventos',
+    category: 'Eventos · produção',
     description:
-      'Umbrella de produção com várias linhas de negócio e lançamento de livro. Site multi-secção com testes E2E em Playwright.',
+      'Produção, agenciamento e coordenação de eventos em Lisboa. Site multi-secção com testes E2E em Playwright.',
     stack: ['HTML', 'CSS', 'JavaScript', 'Playwright'],
     href: 'https://gentlelaughter.com',
     repo: 'https://github.com/bertobarata/gentlelaughter-website',
-    image: '/images/projects/gentlelaughter.jpg',
-    year: '2025',
+    image: '/images/projects/gentlelaughter.webp',
     status: 'live',
-    accent: '#c86ff0',
   },
   {
-    name: 'GreenBond',
-    category: 'Corporativo',
+    name: 'Queen Bee Hair',
+    category: 'Beleza · extensões de cabelo',
     description:
-      'Site corporativo multi-idioma (PT/EN/FR/ES) para empresa de serviços. Arquitetura config-driven e foco em SEO.',
-    stack: ['HTML', 'CSS', 'JavaScript', 'Multi-idioma'],
-    href: 'https://greenbond.pt',
-    repo: 'https://github.com/bertobarata/greenbond',
-    image: '/images/projects/greenbond.jpg',
-    year: '2025',
-    status: 'live',
-    accent: '#3fa34d',
+      'Redesign claro e confiante para especialista em extensões de cabelo em Benfica, Lisboa.',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    href: 'https://bertobarata.github.io/queen-bee-hair/',
+    repo: 'https://github.com/bertobarata/queen-bee-hair',
+    image: '/images/projects/queenbeehair.webp',
+    status: 'wip',
   },
   {
     name: 'Barbearia Supra',
-    category: 'Barbearia',
+    category: 'Serviços · barbearia',
     description:
-      'Landing vintage para barbearia: marcações, galeria de cortes puxada do Instagram e uma identidade forte.',
+      'Landing vintage para barbearia em São Domingos de Benfica, com marcações diretas por telefone e WhatsApp.',
     stack: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages'],
     href: 'https://bertobarata.github.io/barbearia-supra/',
     repo: 'https://github.com/bertobarata/barbearia-supra',
-    image: '/images/projects/barbearia.jpg',
-    year: '2026',
+    image: '/images/projects/barbeariasupra.webp',
     status: 'wip',
-    accent: '#b8863f',
   },
+];
+
+// Own products, shown as compact rows (icon or monogram).
+export type App = {
+  name: string;
+  status: string;
+  description: string;
+  stack: string;
+  icon?: string;
+  shot?: boolean;     // icon is a 16:10 screenshot, not a square app icon
+  mono?: string;
+  links: { label: string; href: string }[];
+};
+
+export const apps: App[] = [
   {
     name: 'Barata Studio',
-    category: 'Estúdio · marca própria',
+    status: 'Online',
     description:
-      'A minha marca de desenvolvimento web. Landing de prospecção com direção premium, motion sofisticado e narrativa em três atos.',
-    stack: ['HTML', 'CSS', 'JavaScript', 'PurgeCSS'],
-    href: 'https://baratastudio.com',
-    repo: 'https://github.com/bertobarata/baratastudio',
-    image: '/images/projects/baratastudio.jpg',
-    year: '2026',
-    status: 'live',
-    accent: '#e8b64a',
+      'O meu estúdio de websites personalizados: site em quatro idiomas, terminal interativo e modo noite automático.',
+    stack: 'HTML · CSS · JavaScript',
+    icon: '/images/projects/baratastudio.webp',
+    shot: true,
+    links: [
+      { label: 'Ver site', href: 'https://baratastudio.com' },
+      { label: 'Código', href: 'https://github.com/bertobarata/baratastudio' },
+    ],
   },
   {
-    name: 'Sales Tracker',
-    category: 'Web app · projeto próprio',
+    name: 'Meet Tracker',
+    status: 'Na App Store',
     description:
-      'Web app full-stack que concebi e construí de raiz para acompanhar atividade comercial. Dashboards de tendências, autenticação Google e sincronização em tempo real entre dispositivos.',
-    stack: ['React', 'JavaScript', 'Auth Google', 'Vercel'],
-    href: 'https://sales-tracker-red.vercel.app',
-    image: '/images/projects/salestracker.jpg',
-    year: '2026',
-    status: 'live',
-    accent: '#3b6ef5',
+      'App para iPhone que regista a atividade comercial do dia e gera o relatório semanal. Começou como web app em React e passou a nativa. Sem contas: os dados ficam no iPhone e no iCloud de cada pessoa.',
+    stack: 'SwiftUI · SwiftData · CloudKit',
+    icon: '/images/projects/meet-tracker-icon.webp',
+    links: [{ label: 'Ver na App Store', href: 'https://apps.apple.com/pt/app/meet-tracker/id6813061781' }],
   },
   {
-    name: 'Ludy Artes',
-    category: 'Papelaria personalizada',
+    name: 'App TVDE',
+    status: 'Em desenvolvimento',
     description:
-      'Agendas e cadernos personalizados com envio para toda a Europa. Catálogo multi-idioma e formulário de encomenda.',
-    stack: ['HTML', 'CSS', 'JavaScript', 'Formspree'],
-    repo: 'https://github.com/bertobarata/ludyartes-website',
-    year: '2025',
-    status: 'live',
-    accent: '#4ab8a0',
+      'Preparação para o exame de motorista TVDE: 653 perguntas com explicações, sinais de trânsito e revisão por repetição espaçada.',
+    stack: 'iOS e Android',
+    icon: '/images/projects/tvde-icon.webp',
+    links: [{ label: 'Ver site', href: 'https://apptvde.store' }],
   },
   {
-    name: 'Valejas Atlético Clube',
-    category: 'Clube desportivo · CMS',
+    name: 'FINE RAG',
+    status: 'Protótipo',
     description:
-      'Site institucional para clube de futebol e futsal com várias modalidades. CMS para a Direção publicar comunicados oficiais que saem em simultâneo nas redes sociais.',
-    stack: ['Next.js 14', 'Sanity CMS', 'GSAP', 'Vercel'],
-    repo: 'https://github.com/bertobarata/valejas-ac',
-    image: '/images/projects/valejas.jpg',
-    year: '2026',
-    status: 'wip',
-    accent: '#1554BB',
+      'Assistente que responde a perguntas sobre fichas FINE de crédito habitação a partir dos próprios PDFs, a correr no computador, sem enviar dados para fora.',
+    stack: 'Next.js · Ollama · LanceDB',
+    mono: 'F',
+    links: [],
   },
 ];
 
@@ -191,7 +219,7 @@ export const education = [
     title: 'Licenciatura em Engenharia Informática e de Computadores',
     org: 'ISEL, Instituto Superior de Engenharia de Lisboa',
     period: 'em curso',
-    note: 'Concluídas: Algoritmos e Estruturas de Dados · Arquitetura de Computadores · Redes de Computadores · Introdução à Programação Web · Introdução a Sistemas de Informação.',
+    note: 'Regime pós-laboral, média atual de 15,9 valores. Concluídas: Algoritmos e Estruturas de Dados · Arquitetura de Computadores · Redes de Computadores · Introdução à Programação Web · Introdução a Sistemas de Informação.',
   },
 ];
 
@@ -199,12 +227,12 @@ export const facets = [
   {
     title: 'Barata Studio',
     kicker: 'Web dev',
-    body: 'Fundador. Websites feitos à mão para contextos formais.',
+    body: 'Fundador. Websites e apps à medida, do briefing ao lançamento.',
   },
   {
-    title: 'MetLife',
-    kicker: 'Mediação financeira',
-    body: 'Analista empresarial e mediador financeiro e de seguros.',
+    title: 'Mediação de seguros e financeira',
+    kicker: 'Consultoria',
+    body: 'Consultor premium. Acompanho clientes e negócios, da análise de necessidades à proposta.',
   },
   {
     title: 'ISEL · Eng. Informática',
